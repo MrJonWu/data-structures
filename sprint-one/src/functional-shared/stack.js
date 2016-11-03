@@ -4,15 +4,11 @@ var Stack = function() {
   var instance = {};
   instance.storage = {};
   instance.siz = 0;
-  extend(instance, stackMethods);
+  _.extend(instance, stackMethods);
   return instance;
   
 };
-var extend = function(arg, arg2) {
-  for (var key in arg2) {
-    arg[key] = arg2[key];
-  }
-};
+
 
 var stackMethods = {};
 stackMethods.push = function(val) {

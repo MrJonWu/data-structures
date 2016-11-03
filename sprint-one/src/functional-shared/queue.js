@@ -4,14 +4,10 @@ var Queue = function() {
   var instance = {};
   instance.storage = {};
   instance.siz = 0;
-  extend(instance, queueMethods);
+  _.extend(instance, queueMethods);
   return instance;
 };
-var extend = function(arg, arg2) {
-  for (var key in arg2) {
-    arg[key] = arg2[key];
-  }
-};
+
 
 var queueMethods = {
   enqueue: function(val) {
