@@ -11,7 +11,6 @@ var LinkedList = function() {
     if (list.tail) {
       list.tail.next = nod;
     }
-
     list.tail = nod;
   };
 
@@ -22,12 +21,17 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-  //   for (key in list) {
-  //     if (key.value) {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
+    var searcher = function (node) {
+      if (node.value === target) {
+        return true;
+      }
+      
+      if (node.next) {
+        return searcher(node.next);
+      }
+      return false;
+    };
+    return searcher(list.head);
   };
 
   return list;
