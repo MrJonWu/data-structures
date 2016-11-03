@@ -35,9 +35,13 @@ treeMethods.contains = function(target) {
   //   if (node.value === target) {
   //     return true;
   //   } else if (node.children.length) {
+  //     var test = false;
   //     for (var i = 0; i < node.children.length; i++) {
-  //       return searcher(node.children[i]);
+  //       if (searcher(node.children[i])) {
+  //         test = true;
+  //       }
   //     }
+  //     return test;
   //   }
   //   return false;
   // };  
