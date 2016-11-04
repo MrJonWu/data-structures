@@ -39,7 +39,6 @@ HashTable.prototype.remove = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   this._storage.each(function(storageInd, y, storage) {
     for (var i = 0; i < storage[index].length; i++) {
-      console.log(storage[index][i]);
       if (storage[index][i][0] === k) {
         storage[index].splice(i, 1);
       }
